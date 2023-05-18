@@ -1,2 +1,1 @@
-# rstudio_setup
-Files for custom RStudio setup
+Put these files in R home directory.
