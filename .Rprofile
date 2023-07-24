@@ -1,20 +1,40 @@
 ### clear R startup message
 cat("\014")
 
+### set language
+Sys.setenv(LANG = "en")
+
 ### modify options
 options(repos = c(CRAN = "https://cran.rstudio.org"))
 options(prompt = "R> ")
 
-### load required packages
-if (!require("usethis", quietly = TRUE)) {
-  install.packages("usethis") 
-}
-if (!require("devtools", quietly = TRUE)) {
-  install.packages("devtools") 
-}
-
 ### greeting
-cat("Hi Lennart! :-)\n")
+message("Hi Lennart! :-)")
+message("Your path is ", getwd(), ".")
+message("You use R version ", paste(R.version[c("major", "minor")], collapse = "."), ".")
 
-### Session infos
-cat("R version", paste(R.version[c("major", "minor")], collapse = "."), "\n")
+### packages
+if (interactive()) {
+  if (suppressWarnings(!require("utils", quietly = TRUE))) {
+    install.packages("utils") 
+  }
+  if (file.exists("renv/activate.R")) {
+    message("You use renv. Activate it?")
+    if (utils::menu(c("yes", "no")) == 1) {
+      source('renv/activate.R')
+    }
+  }
+  if (suppressWarnings(!require("usethis", quietly = TRUE))) {
+    message("You want to install usethis?")
+    if (utils::menu(c("yes", "no")) == 1) {
+      renv::install("usethis", prompt = FALSE) 
+    }
+  }
+  if (suppressWarnings(!require("devtools", quietly = TRUE))) {
+    message("You want to install devtools?")
+    if (utils::menu(c("yes", "no")) == 1) {
+      renv::install("devtools", prompt = FALSE) 
+    }
+  }
+}
+
