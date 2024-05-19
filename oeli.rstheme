@@ -1,11 +1,10 @@
-/* rs-theme-name: Synthwave85 */
+/* rs-theme-name: oeli */
 /* rs-theme-is-dark: TRUE */
-/* Created by Jacqueline Nolis: https://github.com/jnolis/synthwave85 */
-/* Version: v1.0.1 */
+/* Based on the Synthwave85 theme: https://github.com/jnolis/synthwave85 */
 
 .ace_gutter {
-  background: #2A2139;
-  color: #F97E72;
+  background: #000000;
+  color: #FFFFFF;
 }
 
 .ace_print-margin {
@@ -14,7 +13,7 @@
 }
 
 .ace_editor, .rstudio-themes-flat.ace_editor_theme .profvis-flamegraph, .rstudio-themes-flat.ace_editor_theme, .rstudio-themes-flat .ace_editor_theme {
-  background-color: #2A2139;
+  background-color: #000000;
   color: #f92aad;
 }
 
@@ -209,7 +208,7 @@
   background-color: #534A5C;
 }
 .terminal {
-  background-color: #2a2139;
+  background-color: #000000;
   color: #f4eee4;
   font-feature-settings: "liga" 0;
   position: relative;

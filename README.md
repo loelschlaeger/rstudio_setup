@@ -12,6 +12,13 @@ usethis::edit_r_profile()
 The RStudio appearance I like to work with, based on [Synthwave85](https://github.com/jnolis/synthwave85). To setup it up, run:
 
 ```{r}
-oeli_theme_url <- "https://github.com/loelschlaeger/rstudio_setup/blob/main/oeli.rstheme"
-rstudioapi::addTheme(oeli_theme_url, apply = TRUE)
+oeli <- "https://raw.githubusercontent.com/loelschlaeger/rstudio_setup/main/oeli.rstheme"
+rstudioapi::addTheme(oeli, apply = TRUE, force = TRUE)
 ```
+
+To remove it, run:
+
+```{r}
+rstudioapi::removeTheme("oeli")
+```
+
