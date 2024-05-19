@@ -1,9 +1,10 @@
 This repo contains my RStudio setup.
 
-## .Rprofile
+## .Renviron and .Rprofile
 
 Global options and environment variables settings. Can be edited easily via
 ```{r}
+usethis::edit_r_environ()
 usethis::edit_r_profile()
 ```
 
