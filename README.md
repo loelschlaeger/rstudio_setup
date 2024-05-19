@@ -10,7 +10,7 @@ usethis::edit_r_profile()
 
 ## oeli.rstheme
 
-The RStudio appearance I like to work with, based on [Synthwave85](https://github.com/jnolis/synthwave85). To setup it up, run:
+The RStudio appearance I like to work with, based on the [Tomorrow Night ](https://github.com/rstudio/rstudio/blob/master/src/cpp/session/resources/themes/tomorrow_night.rstheme) theme. To setup it up, run:
 
 ```{r}
 oeli <- "https://raw.githubusercontent.com/loelschlaeger/rstudio_setup/main/oeli.rstheme"
